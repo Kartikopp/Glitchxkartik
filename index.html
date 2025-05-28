@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kartik's Bio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #7FFFD4, #4DFff8);
+      margin: 0;
+      padding: 0;
+      animation: bgMove 10s ease-in-out infinite alternate;
+    }
+
+    @keyframes bgMove {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 20px 15px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 1.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header, footer {
+      text-align: center;
+    }
+
+    #typewriter {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #0b3d91;
+      min-height: 40px;
+    }
+
+    .profile {
+      text-align: center;
+    }
+
+    .profile img {
+      width: 150px;
+      border-radius: 50%;
+      margin: 15px 0;
+      border: 3px solid #00dbde;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .links {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .links a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #007BFF;
+      font-weight: bold;
+      transition: transform 0.2s;
+    }
+
+    .links a:hover {
+      transform: scale(1.1);
+    }
+
+    .timeline {
+      margin: 40px 0;
+    }
+
+    .timeline h2 {
+      text-align: center;
+      font-size: 1.4em;
+      margin-bottom: 20px;
+    }
+
+    .event {
+      margin: 20px 0;
+      padding-left: 20px;
+      border-left: 4px solid #00dbde;
+      position: relative;
+      animation: slideIn 1s ease forwards;
+      opacity: 0;
+    }
+
+    .event::before {
+      content: '';
+      position: absolute;
+      left: -9px;
+      top: 0;
+      width: 16px;
+      height: 16px;
+      background: #00dbde;
+      border-radius: 50%;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .portfolio {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .portfolio h2 {
+      font-size: 1.4em;
+      margin-bottom: 20px;
+    }
+
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .project {
+      width: 150px;
+      height: 100px;
+      background-color: #eee;
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .project:hover {
+      transform: scale(1.05);
+    }
+
+    .contact {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .contact h2 {
+      color: #333;
+      margin-bottom: 20px;
+      font-size: 1.4em;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contact input, .contact textarea {
+      width: 90%;
+      max-width: 400px;
+      margin: 10px 0;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      font-size: 1em;
+      background: #f0f0f0;
+    }
+
+    .contact button {
+      padding: 12px 30px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 25px;
+      background: linear-gradient(90deg, #00dbde, #fc00ff);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .contact button:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 id="typewriter"></h1>
+      <p>Frontend Developer</p>
+    </header>
+
+    <section class="profile">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7-rjHUx4cjSM1ceCrAGu_ESgD_Pg8WcvAoGxROndhZlCsFrzqmZv8eT2B&s=10" alt="Kartik's Photo" />
+      <p>Hello! I'm an expert in web development using my Android phone. This is my upgraded bio site using HTML, CSS, JS, animations, and contact features!</p>
+    </section>
+
+    <section class="links">
+      <a href="https://Instagram.com/kartik_11_2009" target="_blank">Instagram</a>
+      <a href="https://youtube.com/@glitchxkartik?si=2d1cIWp0ZAajAs03" target="_blank">YouTube</a>
+    </section>
+
+    <!-- Timeline -->
+    <section class="timeline">
+      <h2>📘 About Me Timeline</h2>
+      <div class="event"><strong>2021</strong> - Started learning HTML & CSS</div>
+      <div class="event"><strong>2022</strong> - Built first Android-based website</div>
+      <div class="event"><strong>2023</strong> - Launched glitchxkartik on YouTube</div>
+      <div class="event"><strong>2024</strong> - Created advanced projects and games</div>
+      <div class="event"><strong>2025</strong> - Building masterpiece apps on phone</div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="portfolio">
+      <h2>🎨 My Projects</h2>
+      <div class="projects">
+        <a class="project" style="background-image: url('https://via.placeholder.com/150?text=Flappy+Bird');" href="#" target="_blank"></a>
+        <a class="project" style="background-image: url('https://via.placeholder.com/150?text=Endless+Runner');" href="#" target="_blank"></a>
+        <a class="project" style="background-image: url('https://via.placeholder.com/150?text=Cab+Booking');" href="#" target="_blank"></a>
+        <a class="project" style="background-image: url('https://via.placeholder.com/150?text=AI+Filter+App');" href="#" target="_blank"></a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact">
+      <h2>📬 Contact Me</h2>
+      <form action="https://formspree.io/f/xblonyrp" method="POST" onsubmit="return showSuccess()">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>Made with 💚 by Kartik Yadav using Acode</p>
+    </footer>
+  </div>
+
+  <script>
+    // Typewriter Effect
+    const txt = "Hi, I'm Kartik Yadav";
+    let i = 0;
+    function typeEffect() {
+      if (i < txt.length) {
+        document.getElementById("typewriter").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeEffect, 90);
+      }
+    }
+    typeEffect();
+
+    // Contact Success Alert
+    function showSuccess() {
+      setTimeout(() => {
+        alert("✅ Thank you! Your message was sent.");
+      }, 200);
+      return true;
+    }
+
+    console.log("Bio Portfolio Website Loaded Successfully!");
+  </script>
+</body>
+</html>
